@@ -43,6 +43,8 @@ for i in $(seq 1 10); do curl -s -o /dev/null https://YOUR-SERVICE-URL/nope; don
 
 Metrics lag one to two minutes, so wait about five minutes for the email.
 
+![Alert email received after the test](docs/acme-hello-alerts.png)
+
 ## Clean up
 
 ```

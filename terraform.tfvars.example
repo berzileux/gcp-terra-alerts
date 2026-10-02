@@ -1,0 +1,8 @@
+project_id          = "project-abc"
+alert_email         = "PUT-YOUR-EMAIL-HERE"
+service_name        = "acme-hello"
+
+# Testing values: a bad URL returns 404, which is a 4xx.
+# After the test, switch to "5xx" and a higher threshold.
+response_code_class = "4xx"
+threshold           = 3

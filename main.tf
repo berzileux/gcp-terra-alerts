@@ -55,5 +55,11 @@ resource "google_monitoring_alert_policy" "cloud_run_errors" {
     }
   }
 
+  documentation {
+    subject   = "${var.service_name} errors"
+    content   = "Too many ${var.response_code_class} responses on ${var.service_name}. First check Logs Explorer for the service, then the last deploy. Runbook: add a link here."
+    mime_type = "text/markdown"
+  }
+
   notification_channels = [google_monitoring_notification_channel.email.id]
 }

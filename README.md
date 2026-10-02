@@ -4,6 +4,7 @@ Terraform for Cloud Monitoring alerts on a Cloud Run service.
 
 ## What it creates
 
+
 | Resource | Purpose |
 |---|---|
 | `google_monitoring_notification_channel.email` | Where alerts are sent |

@@ -1,8 +1,11 @@
-project_id          = "project-abc"
-alert_email         = "PUT-YOUR-EMAIL-HERE"
-service_name        = "acme-hello"
+project_id  = "romana-abc"
+alert_email = "PUT-YOUR-EMAIL-HERE"
 
-# Testing values: a bad URL returns 404, which is a 4xx.
-# After the test, switch to "5xx" and a higher threshold.
-response_code_class = "4xx"
-threshold           = 3
+# Key is the Cloud Run service name. Host is the URL without https://.
+services = {
+  "acme-hello" = {
+    host                 = "acme-hello-XXXXXXXX-uc.a.run.app"
+    error_threshold      = 5
+    latency_threshold_ms = 1000
+  }
+}
